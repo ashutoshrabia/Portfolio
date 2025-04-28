@@ -33,15 +33,11 @@ const projects = [
 export default function Home() {
   const [theme, setTheme] = useState<'light'|'dark'>('light')
 
-  const nextTheme = {
-    light: 'dark',
-    dark:  'light',
-  }[theme]
+  const nextTheme: 'light' | 'dark' = theme === 'light' ? 'dark' : 'light'
 
-  const themeClasses = {
-    light: 'bg-gradient-to-br from-indigo-200 via-pink-200 to-yellow-200 text-gray-900',
-    dark:  'bg-gray-900 text-gray-100',
-  }[theme]
+  const themeClasses = theme === 'light'
+    ? 'bg-gradient-to-br from-indigo-200 via-pink-200 to-yellow-200 text-gray-900'
+    : 'bg-gray-900 text-gray-100'
 
   return (
     <div className={`${themeClasses} min-h-screen p-8 transition-colors duration-500 font-serif`}>
