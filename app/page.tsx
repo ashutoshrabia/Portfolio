@@ -1,9 +1,6 @@
 // app/page.tsx
 'use client'
 
-import NavBar from '../components/NavBar'
-import ProjectCard from '../components/ProjectCard'
-
 
 import { useState } from 'react'
 import Image from 'next/image'
